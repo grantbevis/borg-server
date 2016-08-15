@@ -1,10 +1,11 @@
-# Borg Backup Server Container
+## Borg Backup Server Container
+![alt text](https://borgbackup.readthedocs.io/en/stable/_static/logo.png "Borgbackup")
 
-## Description
+### Description
 
 My take on a Borgbackup Server as a Docker container to facilicate the backing up of remote machines using [Borgbackup](https://github.com/borgbackup)
 ---
-## Dockerfile
+### Dockerfile
 ```
 FROM alpine:latest
 MAINTAINER b3vis
@@ -25,7 +26,7 @@ CMD ["/usr/bin/supervisord"]
 ```
 ---
 
-## Usage
+### Usage
 
 I personally like to split my ssh keys out of the main container to make updates and management easier. To achieve this I create a persistent storage container;
 
