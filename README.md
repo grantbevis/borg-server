@@ -42,8 +42,7 @@ docker create \
   -p 2022:22 \
   b3vis/borg-server
 ```
----
-## Note
+* Note
 
 After creating the container you will need to start the container add your own public keys
 ---
