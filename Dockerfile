@@ -1,7 +1,7 @@
 FROM alpine:latest
 MAINTAINER b3vis
 #Install Borg & SSH
-RUN apk add openssh sshfs borgbackup supervisor --no-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/
+RUN apk add openssh sshfs borgbackup supervisor --no-cache
 RUN adduser -D -u 1000 borg && \
     ssh-keygen -A && \
     mkdir /backups && \
