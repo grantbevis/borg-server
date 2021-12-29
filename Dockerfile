@@ -1,7 +1,7 @@
 FROM alpine:latest
 MAINTAINER b3vis
 #Install Borg & SSH
-RUN apk add openssh sshfs borgbackup supervisor --no-cache
+RUN apk add openssh sshfs borgbackup supervisor
 RUN adduser -D -u 1000 borg && \
     mkdir /backups && \
     chown borg.borg /backups && \
@@ -13,4 +13,5 @@ COPY supervisord.conf /etc/supervisord.conf
 COPY service.sh /usr/local/bin/service.sh
 RUN passwd -u borg
 EXPOSE 22
+VOLUME /etc/ssh
 CMD ["/usr/bin/supervisord"]
