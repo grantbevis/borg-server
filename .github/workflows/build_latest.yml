@@ -1,5 +1,5 @@
 ---
-name: 'Build PHP Latest Images'
+name: 'Build Latest Images'
 
 on:
   push:
