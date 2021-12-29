@@ -16,7 +16,7 @@ jobs:
       - name: Prepare Image Build
         id: prep_image
         run: |
-          DOCKER_IMAGE=${{ github.actor }}/borg-server
+          DOCKER_IMAGE=ghcr.io/${{ github.actor }}/borg-server
           VERSION=latest
           # If this is git tag, use the tag name as a docker tag
           if [[ $GITHUB_REF == refs/tags/* ]]; then
