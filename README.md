@@ -19,7 +19,7 @@ docker create \
   --volumes-from borg-keys-storage \
   -v path/to/backups:/backups \
   -p 2022:22 \
-  ghcr.io/b3vis/borg-server
+  ghcr.io/grantbevis/borg-server
 ```
 
 ### Note
