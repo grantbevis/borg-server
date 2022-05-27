@@ -1,8 +1,12 @@
-FROM alpine:3
+FROM alpine:3.16.0
 LABEL maintainer="b3vis"
 
 #Install Borg & SSH
-RUN apk add --no-cache openssh=8.8_p1-r1 sshfs=3.7.2-r0 borgbackup=1.1.17-r2 supervisor=4.2.2-r2
+RUN apk add --no-cache \
+    openssh=9.0_p1-r1 \
+    sshfs=3.7.2-r1 \
+    borgbackup=1.2.0-r0 \
+    supervisor=4.2.4-r0
 RUN adduser -D -u 1000 borg && \
     passwd -u borg && \
     mkdir -m 0700 /backups && \
