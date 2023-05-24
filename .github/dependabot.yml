@@ -8,3 +8,9 @@ updates:
     schedule:
       # Check for updates to GitHub Actions every weekday
       interval: "daily"
+
+  # Configuration for Dockerfile
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
